@@ -11,7 +11,7 @@ This is a Meteor Chat app made for introducing MeteorJS to new developers. This 
 ### Installation
 
 1. [HOW TO INSTALL METEOR](https://www.meteor.com/install)
-2. `git clone https://github.com/Code-for-Miami/miamigraph.git`
+2. `git clone https://github.com/HiGregory/Meteor-MangoChat.git'
 3. From the cloned repo, run `meteor`
 4. After the app builds, please visit [http://localhost:3000](http://localhost:3000)
 
