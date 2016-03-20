@@ -1,22 +1,25 @@
+// This code is running on both the client and server.
 Messages = new Mongo.Collection("msgs");
 
+//This code below only runs on the server. 
 if (Meteor.isServer) {
-  // This code only runs on the server
   Meteor.publish("messages", function () {
+    // This code is a standard MongoDB query that limits the amount of messages to 5 for this web app. 
     return Messages.find({}, {sort: {createdAt: -1}, limit: 5});
   });
 }
 
+// This code below only runs on the client
 if (Meteor.isClient) {
-  // This code only runs on the client
   Meteor.subscribe("messages");
 }
 
 Meteor.methods({
   sendMessage: function (message) {
-    // if (! Meteor.userId()) {
-    //   throw new Meteor.Error("not-authorized");
-    // }
+    //The code does not permit anyone to make a message without signing in first. 
+    if (! Meteor.userId()) {
+      throw new Meteor.Error("not-authorized");
+     }
 
     Messages.insert({
       text: message,
@@ -44,8 +47,9 @@ if (Meteor.isClient) {
     }
   });
 
-  // Accounts.ui.config({
-  //   passwordSignupFields: "USERNAME_ONLY"
-  // });
+//The code below allows the user to log in with their username and password. 
+  Accounts.ui.config({
+  passwordSignupFields: "USERNAME_ONLY"
+   });
 }
 
