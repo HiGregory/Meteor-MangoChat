@@ -6,9 +6,9 @@ A simple chat app styled in gold for Mango Hacks session on MeteorJS
 ### Introduction to MeteorJS
 This is a Meteor Chat app made for introducing MeteorJS to new developers. This code was made to reflect and show various features that MeteorJS offers as a Javascript platform. 
 
-[MangoChats.Meteor.com](http://mangochats.meteor.com)
+ - > [MangoChats.Meteor.com](http://mangochats.meteor.com) | This link no longer works as Meteor Free Hosting is no longer available. 
 
-### Installation
+### Installation (Works)
 
 1. [HOW TO INSTALL METEOR](https://www.meteor.com/install)
 2. `git clone https://github.com/HiGregory/Meteor-MangoChat.git'
